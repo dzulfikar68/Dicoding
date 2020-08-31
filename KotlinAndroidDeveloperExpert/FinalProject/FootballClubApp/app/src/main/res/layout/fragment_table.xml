@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/header" android:padding="3dp" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="Team" android:layout_width="100dp" android:textColor="@color/colorAccent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:textSize="14sp" android:textStyle="italic|bold"/>
+        <TextView android:text="Play" android:layout_width="50dp" android:textColor="@android:color/black" android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="italic"/>
+        <TextView android:text="Win" android:layout_width="50dp" android:textColor="@android:color/black" android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="italic"/>
+        <TextView android:text="Draw" android:layout_width="50dp" android:textColor="@android:color/black" android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="italic"/>
+        <TextView android:text="Loss" android:layout_width="50dp" android:textColor="@android:color/black" android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="italic"/>
+        <TextView android:text="Point" android:layout_width="50dp" android:textColor="@android:color/black" android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="italic"/>
+    </LinearLayout>
+
+    <View
+            android:layout_below="@id/header"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    <ProgressBar android:layout_below="@id/header" android:layout_marginTop="10dp" android:id="@+id/loading" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:layout_below="@id/header" android:layout_marginTop="30dp" android:visibility="gone" android:gravity="center_horizontal" android:textStyle="italic" android:id="@+id/alert" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/header"
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</RelativeLayout>
